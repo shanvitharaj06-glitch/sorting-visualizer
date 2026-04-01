@@ -1,12 +1,17 @@
 body {
-  text-align: center;
-  font-family: Arial;
-  background: #111;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
+  text-align: center;
 }
 
 h1 {
   margin: 20px;
+}
+
+#info {
+  margin: 10px;
 }
 
 #array-container {
@@ -14,29 +19,37 @@ h1 {
   justify-content: center;
   align-items: flex-end;
   height: 350px;
-  margin: 20px;
+  margin: 30px;
 }
 
 .bar {
   width: 20px;
-  margin: 2px;
-  background: cyan;
-  transition: 0.3s;
+  margin: 3px;
+  background: #00f5d4;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
+.bar.compare { background: red; }
+.bar.swap { background: yellow; }
+.bar.sorted { background: limegreen; }
+
 .controls {
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 button {
-  margin: 5px;
   padding: 10px;
+  border-radius: 10px;
   border: none;
-  background: #00adb5;
+  background: rgba(255,255,255,0.1);
   color: white;
   cursor: pointer;
 }
 
 button:hover {
-  background: #007b83;
+  background: rgba(255,255,255,0.3);
 }

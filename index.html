@@ -7,20 +7,26 @@
 </head>
 <body>
 
-<h1>Sorting Visualizer</h1>
+<h1>🚀 Sorting Visualizer</h1>
+
+<div id="info">
+  <h3 id="algo-name">Algorithm: -</h3>
+  <p id="time">Time Complexity: -</p>
+</div>
 
 <div id="array-container"></div>
 
 <div class="controls">
   <button onclick="generateArray()">Generate</button>
 
-  <button onclick="bubbleSort()">Bubble</button>
-  <button onclick="selectionSort()">Selection</button>
-  <button onclick="insertionSort()">Insertion</button>
+  <button onclick="setAlgo('Bubble')">Bubble</button>
+  <button onclick="setAlgo('Selection')">Selection</button>
+  <button onclick="setAlgo('Insertion')">Insertion</button>
+  <button onclick="setAlgo('Merge')">Merge</button>
+  <button onclick="setAlgo('Quick')">Quick</button>
 
   <button onclick="prevStep()">⬅ Prev</button>
   <button onclick="nextStep()">Next ➡</button>
-
   <button onclick="play()">▶ Play</button>
 
   <label>Speed</label>
@@ -28,6 +34,5 @@
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

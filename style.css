@@ -1,0 +1,42 @@
+body {
+  text-align: center;
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+h1 {
+  margin: 20px;
+}
+
+#array-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 350px;
+  margin: 20px;
+}
+
+.bar {
+  width: 20px;
+  margin: 2px;
+  background: cyan;
+  transition: 0.3s;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background: #00adb5;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #007b83;
+}

@@ -3,12 +3,21 @@ let steps = [];
 let currentStep = 0;
 let speed = 300;
 
+// Update size display
+document.getElementById("size").oninput = function () {
+  document.getElementById("size-value").innerText = this.value;
+};
+
 // Generate Array
 function generateArray() {
   array = [];
-  for (let i = 0; i < 20; i++) {
+
+  let size = document.getElementById("size").value;
+
+  for (let i = 0; i < size; i++) {
     array.push(Math.floor(Math.random() * 100));
   }
+
   steps = [];
   currentStep = 0;
   renderArray();
@@ -19,10 +28,14 @@ function renderArray(active = [], swapping = [], sorted = []) {
   const container = document.getElementById("array-container");
   container.innerHTML = "";
 
+  let barWidth = Math.max(5, 600 / array.length);
+
   array.forEach((value, index) => {
     const bar = document.createElement("div");
     bar.classList.add("bar");
+
     bar.style.height = value * 3 + "px";
+    bar.style.width = barWidth + "px";
 
     if (active.includes(index)) bar.classList.add("compare");
     if (swapping.includes(index)) bar.classList.add("swap");

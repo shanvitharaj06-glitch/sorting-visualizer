@@ -14,16 +14,19 @@ h1 {
   margin: 10px;
 }
 
+/* Array container */
 #array-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 350px;
   margin: 30px;
+  padding: 10px;
 }
 
+/* Bars */
 .bar {
-  margin: 3px;
+  margin: 2px;
   background: #00f5d4;
   border-radius: 5px;
   transition: all 0.3s ease;
@@ -33,22 +36,60 @@ h1 {
 .bar.swap { background: yellow; }
 .bar.sorted { background: limegreen; }
 
+/* Controls section */
 .controls {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
+  margin: 20px;
 }
 
+/* Buttons */
 button {
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 10px;
   border: none;
   background: rgba(255,255,255,0.1);
   color: white;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
   background: rgba(255,255,255,0.3);
+  transform: scale(1.05);
+}
+
+/* Input box (NEW ✨) */
+input[type="number"] {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 120px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Speed slider */
+input[type="range"] {
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .bar {
+    margin: 1px;
+  }
+
+  input[type="number"] {
+    width: 80px;
+  }
 }

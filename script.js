@@ -14,6 +14,19 @@ function generateArray() {
 
   let size = document.getElementById("size").value;
 
+  // Validation
+  if (size === "" || size < 5) {
+    alert("Please enter a valid size (min 5)");
+    return;
+  }
+
+  if (size > 200) {
+    alert("Max allowed size is 200");
+    return;
+  }
+
+  size = parseInt(size);
+
   for (let i = 0; i < size; i++) {
     array.push(Math.floor(Math.random() * 100));
   }
@@ -22,13 +35,12 @@ function generateArray() {
   currentStep = 0;
   renderArray();
 }
-
 // Render
 function renderArray(active = [], swapping = [], sorted = []) {
   const container = document.getElementById("array-container");
   container.innerHTML = "";
 
-  let barWidth = Math.max(5, 600 / array.length);
+  let barWidth = Math.max(3, 800 / array.length);
 
   array.forEach((value, index) => {
     const bar = document.createElement("div");
@@ -44,7 +56,6 @@ function renderArray(active = [], swapping = [], sorted = []) {
     container.appendChild(bar);
   });
 }
-
 // Set Algorithm
 function setAlgo(type) {
   if (type === "Bubble") {

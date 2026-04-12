@@ -17,7 +17,12 @@
 <div id="array-container"></div>
 
 <div class="controls">
+
   <button onclick="generateArray()">Generate</button>
+
+  <label>Size</label>
+  <input type="range" id="size" min="5" max="100" value="20">
+  <span id="size-value">20</span>
 
   <button onclick="setAlgo('Bubble')">Bubble</button>
   <button onclick="setAlgo('Selection')">Selection</button>
@@ -31,6 +36,7 @@
 
   <label>Speed</label>
   <input type="range" id="speed" min="50" max="1000" value="300">
+
 </div>
 
 <script src="script.js"></script>
